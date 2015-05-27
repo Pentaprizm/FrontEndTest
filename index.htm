@@ -22,45 +22,69 @@
 		<input type="button" class="btn btn-send" id="sendReq" value="request data">
 	</div>
 	<form class="clearfix wrapper">
-	<p>Please select data that you want to display:</p>
+	<p class="form-des">Please select data that you want to display:</p>
 	<div class="clearfix">
 	<div class="select-wrapper">
-	<ul>
-		<li><input type="checkbox" id="id"></li>
-		<label for="id">id</label>
-		<li><input type="checkbox" id="isActive"></li>
-		<label for="isActive">isActive</label>
-		<li><input type="checkbox" id="balance"></li>
-		<label for="balance">balance</label>		
-		<li><input type="checkbox" id="picture"></li>
-		<label for="picture">picture</label>		
-		<li><input type="checkbox" id="age"></li>
-		<label for="age">age</label>		
-		<li><input type="checkbox" id="eyeColor"></li>
-		<label for="eyeColo">eyeColor</label>		
+	<ul class="data-select">
+		<li><input type="checkbox" id="id">
+			<label for="id">id</label>
+		</li>
+
+		<li><input type="checkbox" id="isActive">
+			<label for="isActive">isActive</label>	
+		</li>
+
+		<li><input type="checkbox" id="balance">
+			<label for="balance">balance</label>		
+		</li>
+	
+		<li><input type="checkbox" id="picture">
+			<label for="picture">picture</label>		
+		</li>
+	
+		<li><input type="checkbox" id="age">
+			<label for="age">age</label>		
+		</li>
+	
+		<li><input type="checkbox" id="eyeColor">
+			<label for="eyeColo">eyeColor</label>		
+		</li>
+	
 	</ul>
 	</div>
 	
 	<div class="select-wrapper">
-	<ul>
-		<li><input type="checkbox" id="name"></li>
-		<label for="name">name</label>		
-		<li><input type="checkbox" id="gender"></li>
-		<label for="gender">gender</label>		
-		<li><input type="checkbox" id="company"></li>
-		<label for="company">company</label>		
-		<li><input type="checkbox" id="email"></li>
-		<label for="email">email</label>		
-		<li><input type="checkbox" id="phone"></li>
-		<label for="phone">phone</label>			
-		<li><input type="checkbox" id="address"></li>
-		<label for="address">address</label>		
+	<ul class="data-select">
+		<li><input type="checkbox" id="name">
+			<label for="name">name</label>
+		</li>
+			
+		<li><input type="checkbox" id="gender">
+			<label for="gender">gender</label>
+		</li>
+		
+		<li><input type="checkbox" id="company">
+			<label for="company">company</label>		
+		</li>
+	
+		<li><input type="checkbox" id="email">
+			<label for="email">email</label>	
+		</li>
+		
+		<li><input type="checkbox" id="phone">
+			<label for="phone">phone</label>		
+		</li>
+		
+		<li><input type="checkbox" id="address">
+			<label for="address">address</label>		
+		</li>
+	
 	</ul>			
 	</div>
 	</div>
 	
-	<a href="#">Select All</a>
-	<a href="#">Clear Selection</a>
+	<a href="#" id="selectall" class="link">Select All</a>
+	<a href="#" id="selectclear" class="link">Clear Selection</a>
 	
 	<input type="submit" class="btn sbm" value="submit">
 	</form>

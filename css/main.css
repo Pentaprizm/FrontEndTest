@@ -57,23 +57,58 @@ h1{
 	height: 82px;
 }
 
-.select-wrapper{
-	float: left;
+.form-des{
+	color: #1881ac;
 }
 
-ul {
+.select-wrapper{
+	float: left;
+	width: 250px;
+}
+
+.data-select {
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
 
+.data-select li{
+	margin-bottom: 10px;
+
+}
+
+
+
+label:hover{
+	color: #1881ac;
+}
+
 input[type="checkbox"]{
-	display: inline-block;
+	display: none;
+	vertical-align: bottom;
+}
+
+input[type="checkbox"]+label:before{
+	content: "";
+    display: inline-block;
+	vertical-align: bottom;
+    height: 22px;
+    width: 15px;
+	padding-right: 10px;
+	background: 0 5px url(../img/checkbox_bg.png) no-repeat;
+}
+input[type="checkbox"]:checked+label:before{
+	background: 4px 2px url(../img/checkbox_check.png) no-repeat, 0 5px url(../img/checkbox_bg.png) no-repeat;
 }
 
 input[type="submit"]{
 	display: block;
 }
+
+.link{
+	color: #1881ac;
+}
+
 
 /*Вспомогательные стили общего назначения*/
 .hidden {
