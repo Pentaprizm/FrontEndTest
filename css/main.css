@@ -23,7 +23,11 @@ header{
 
 h1{
 	font-weight: normal;
+	font-size: 30px;
+}
 
+.author{
+	font-size: 14px;
 }
 
 .btn-wrapper{
@@ -46,7 +50,7 @@ h1{
 }
 
 .btn-send{
-	padding: 0 70px;
+	padding: 0 60px 0 75px;
 	font-size: 24px;
 	line-height: 24px;
 	height: 82px;
