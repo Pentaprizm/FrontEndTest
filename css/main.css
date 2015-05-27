@@ -17,17 +17,20 @@ body{
 
 header{
 	border-bottom: 7px solid #e0e0e0;
-	line-height: 21.86px;
 	box-sizing: border-box;
+	line-height: 21.86px;
 }
 
 h1{
 	font-weight: normal;
 	font-size: 30px;
+	margin-top: 23px;
+	margin-bottom: 8px;
 }
 
 .author{
 	font-size: 14px;
+	margin-top: 0;
 }
 
 .btn-wrapper{
@@ -43,7 +46,7 @@ h1{
 	background: linear-gradient(to bottom, #1881ac, #1eb4da);
 	text-align: center;
 	box-sizing: border-box;
-	text-transform: capitalize;
+	text-transform: uppercase;
 }
 
 .btn:hover{
@@ -59,11 +62,16 @@ h1{
 
 .form-des{
 	color: #1881ac;
+	font-size: 18px;
+	margin: 30px 0 38px;
+	
 }
 
 .select-wrapper{
 	float: left;
-	width: 250px;
+	width: 200px;
+	margin-bottom: 50px;
+	margin-right: 10px;
 }
 
 .data-select {
@@ -73,11 +81,13 @@ h1{
 }
 
 .data-select li{
-	margin-bottom: 10px;
+	margin-bottom: 6px;
 
 }
 
-
+label{
+	font-size: 14px;
+}
 
 label:hover{
 	color: #1881ac;
@@ -97,6 +107,7 @@ input[type="checkbox"]+label:before{
 	padding-right: 10px;
 	background: 0 5px url(../img/checkbox_bg.png) no-repeat;
 }
+
 input[type="checkbox"]:checked+label:before{
 	background: 4px 2px url(../img/checkbox_check.png) no-repeat, 0 5px url(../img/checkbox_bg.png) no-repeat;
 }
@@ -109,6 +120,20 @@ input[type="submit"]{
 	color: #1881ac;
 }
 
+.selectall{
+	padding-right: 11px;
+	border-right: 1px solid #1881ac;
+}
+
+.selectclear{
+	padding: 0 10px;
+}
+
+.btn-sbm{
+	margin-top: 10px;
+	height: 35px;
+	padding: 0 35px 0 40px;
+}
 
 /*Вспомогательные стили общего назначения*/
 .hidden {
