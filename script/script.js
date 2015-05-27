@@ -1,2 +1,1 @@
-
-$("#sendReq").bind("click", function(event){alert("Say Hi!");});
+$("#sendReq").bind("click", function(){alert("Hi!");});
