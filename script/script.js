@@ -1,12 +1,23 @@
-$("#sendReq").bind("click", function(){$("#sendReq").addClass("hidden");
-	$(".btn-wrapper").append("<img src='img/ajax-loader.gif'>");});
-	
-	
-function reqListener() {
-  var data = JSON.parse(this.responseText);    
-}
+$("#sendReq").bind("click", function () {
+    $("#sendReq").addClass("hidden");
+    $(".btn-wrapper").append("<img src='img/ajax-loader.gif'>");
+    $.ajax({
+        type: 'get',
+        url: 'http://www.json-generator.com/api/json/get/bUsRkvEmHm?indent=2',
+        dataType: 'json',
+        success: function (arr) {
+            renderReq(arr);
+        }
+    });
+});
 
-var oReq = new XMLHttpRequest();  
-oReq.onload = reqListener;
-oReq.open('GET', 'http://www.json-generator.com/api/json/get/bUsRkvEmHm?indent=2', true);
-oReq.send();
+function renderReq(arr) {
+    if (arr.length > 0) {
+        var html = '';
+        for (x in arr[0]) {
+            html += x + ' ';
+        }
+        console.log(html.length);
+        $('.btn-wrapper').html(html);
+    }
+}
