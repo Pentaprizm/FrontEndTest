@@ -43,6 +43,7 @@ h1{
 	background: linear-gradient(to bottom, #1881ac, #1eb4da);
 	text-align: center;
 	box-sizing: border-box;
+	text-transform: capitalize;
 }
 
 .btn:hover{
@@ -56,6 +57,23 @@ h1{
 	height: 82px;
 }
 
+.select-wrapper{
+	float: left;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+input[type="checkbox"]{
+	display: inline-block;
+}
+
+input[type="submit"]{
+	display: block;
+}
 
 /*Вспомогательные стили общего назначения*/
 .hidden {
