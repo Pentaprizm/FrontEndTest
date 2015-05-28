@@ -1,12 +1,12 @@
-
-
 $("#sendReq").bind("click", function () {
-    $("#sendReq").addClass("hidden");
-    $(".btn-wrapper").append("<img src='img/ajax-loader.gif'>");
     $.ajax({
         type: 'get',
         url: 'http://www.json-generator.com/api/json/get/bUsRkvEmHm?indent=2',
         dataType: 'json',
+		beforeSend: function(){    
+			$("#sendReq").addClass("hidden");
+			$(".btn-wrapper").append("<img src='img/ajax-loader.gif'>");
+			},
         success: function (arr){
 		    $(".btn-wrapper").remove();
             renderReq(arr);
