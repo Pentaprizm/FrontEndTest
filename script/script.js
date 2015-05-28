@@ -7,7 +7,7 @@ $("#sendReq").bind("click", function () {
         type: 'get',
         url: 'http://www.json-generator.com/api/json/get/bUsRkvEmHm?indent=2',
         dataType: 'json',
-        success: function (arr) {
+        success: function (arr){
 		    $(".btn-wrapper").remove();
             renderReq(arr);
         }
@@ -42,24 +42,43 @@ $("#selectclear").bind("click", function(event){
 
 $("#submit").bind("click", function(event){
 	event.preventDefault();
-	$("#data-wrapper").empty();
-	var template = $("#template").html();
-	var rendered = Mustache.render(template, {
+	/*	var ids = $("input:checked").map(function(){(this.id==undefined) ? null : this.id;}).get();
+			alert(ids[0]);
+	$("#data-wrapper").empty(); */
+	var data = {
 	"names": [
     { "name": "Moe" },
     { "name": "Larry" },
     { "name": "Curly" },
-	{ "name": "Moe" },
-    { "name": "Larry" },
-    { "name": "Curly" },
-	{ "name": "Moe" },
-    { "name": "Larry" },
-    { "name": "Curly" },
-	{ "name": "Moe" },
-    { "name": "Larry" },
-    { "name": "Curly" }
+	{ "name": "Joe" },
+    { "name": "Mike" },
+    { "name": "Pete" },
+	{ "name": "Po" },
+    { "name": "Lars" },
+    { "name": "Kate" },
+	{ "name": "Mic" },
+    { "name": "Carl" },
+    { "name": "Sully" }
+  ],
+  "titles": [
+    { "title": "1" },
+    { "title": "2" },
+    { "title": "3" },
+	{ "title": "4" },
+    { "title": "5" },
+    { "title": "6" },
+	{ "title": "7" },
+    { "title": "8" },
+    { "title": "9" },
+	{ "title": "10" },
+    { "title": "11" },
+    { "title": "12" }
+  
   ]
-});
+};
+
+	var template = $("#template").html();
+	var rendered = Mustache.render(template, data);
 	$("#data-wrapper").html(rendered);
 });
 
