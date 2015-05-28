@@ -134,6 +134,49 @@ input[type="submit"]{
 	height: 35px;
 	padding: 0 35px 0 40px;
 }
+.btn-back{
+	height: 35px;
+	padding: 0 15px 0 40px;
+}
+
+.btn-back{
+	background: 9px 50% url(../img/arrow_back.png) no-repeat, linear-gradient(to bottom, #1881ac, #1eb4da);
+}
+.btn-back:hover{
+	background: 9px 50% url(../img/arrow_back.png) no-repeat, linear-gradient(to top, #1881ac, #1eb4da);
+}
+
+table{
+	margin-top: 14px;
+}
+
+th{
+	height: 52px;
+	background: #8dc6de;
+	padding: 5px 10px;
+	border-right: 1px solid white;
+	font-weight: normal;
+}
+
+td{
+	padding: 10px;
+	border-right: 1px solid white;
+}
+
+td:last-child{
+	border: none;
+}
+tr{
+	height: 80px;
+}
+
+tr:nth-child(even){
+	background: #e3e3e3;
+}
+
+tr:nth-child(odd){
+	background: #f0f0f0;
+}
 
 /*Вспомогательные стили общего назначения*/
 .hidden {
