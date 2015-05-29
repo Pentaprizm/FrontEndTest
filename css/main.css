@@ -70,7 +70,7 @@ h1{
 .heading{
 	color: #1881ac;
 	font-size: 18px;
-	margin: 20px 0 30px;
+	margin: 25px 0 30px;
 	
 }
 
@@ -147,6 +147,9 @@ input[type="submit"]{
 	height: 35px;
 	padding: 0 15px 0 40px;
 	margin-top: 20px;
+	margin-right: 10px;
+	font-size: 12px;
+	line-height: 12px;
 }
 
 .btn-back{
@@ -159,6 +162,8 @@ input[type="submit"]{
 
 .data-table{
 	margin-top: 14px;
+	font-size: 12px;
+	color: #434343;
 }
 
 .data-table th{
@@ -170,17 +175,16 @@ input[type="submit"]{
 }
 
 .data-table td{
+	display: table-cell;
 	padding: 10px;
 	border-right: 1px solid white;
+
 }
 
 .data-table td:last-child{
 	border: none;
 }
 
-.data-table tr{
-	height: 80px;
-}
 
 .data-table tr:nth-child(even){
 	background: #e3e3e3;
@@ -194,10 +198,7 @@ input[type="submit"]{
 .hidden {
     display: none !important;
     visibility: hidden;
-}
-
-.invisible {
-    visibility: hidden;
+	height: 0;
 }
 
 .clearfix:before,

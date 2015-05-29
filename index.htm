@@ -2,70 +2,83 @@
 
 <html>
 <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Front-end: AJAX Requests</title>
-		<link rel="stylesheet" href="css/normalize.min.css" type="text/css">
-		<link rel="stylesheet" href="css/main.css" type="text/css">
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>		
-		<script type="text/javascript" src="script/mustache.js"></script> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Front-end: AJAX Requests</title>
+    <link rel="stylesheet" href="css/normalize.min.css" type="text/css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="script/mustache.js"></script>
+	
+	<!--Плагин для поддержки кроссдоменных запросов из IE9-->
+	<script type="text/javascript" src="script/xdr.js"></script>
 </head>
 <body>
 
-	<header>
-	<div class="wrapper">
-		<h1>Front End Test Project</h1>
-		<p class="author">by: Yuri Solovyov</p>
-	</div>
-	</header>
-	<div class="btn-wrapper">
-		<input type="button" class="btn btn-send" id="sendReq" value="request data">
-	</div>
-	
-	<div id="data-wrapper" class="wrapper">
-	
-	<form class="clearfix">
-	<p class="heading heading-form hidden">Please select data that you want to display:</p>
-	<div class="clearfix">
-	<div class="select-wrapper" id="sel-wrap-0">
-	<ul class="data-select">
+<header>
+    <div class="wrapper">
+        <h1>Front End Test Project</h1>
 
-	</ul>
-	</div>
+        <p class="author">by: Yuri Solovyov</p>
+    </div>
+</header>
+<div class="btn-wrapper">
+    <input type="button" id="sendReq" class="btn btn-send" value="request data">
+</div>
+
+<div id="data-wrapper" class="wrapper">
+
+    <form class="clearfix">
+        <p class="heading heading-form hidden">Please select data that you want to display:</p>
+
+        <div class="clearfix">
+            <div id="sel-wrap-0" class="select-wrapper">
+                <ul class="data-select">
+
+                </ul>
+            </div>
+
+            <div id="sel-wrap-1" class="select-wrapper">
+                <ul class="data-select">
+                </ul>
+            </div>
+        </div>
+
+        <a href="#" id="selectall" class="link selectall hidden">Select All</a>
+        <a href="#" id="selectclear" class="link selectclear hidden">Clear Selection</a>
+
+        <input type="submit" id="submit" class="btn btn-sbm hidden" value="submit">
+    </form>
+</div>
+
+<div id="table-wrapper" class="wrapper">
+</div>
+
+
+<script id="template" type="x-tmpl-mustache">
 	
-	<div class="select-wrapper" id="sel-wrap-1">
-	<ul class="data-select">
-	</ul>			
-	</div>
-	</div>
-	
-	<a href="#" id="selectall" class="link selectall hidden">Select All</a><!--
- --><a href="#" id="selectclear" class="link selectclear hidden">Clear Selection</a>
-	
-	<input type="submit" id="submit" class="btn btn-sbm hidden" value="submit">
-	</form>
-	</div>	
-	
-	
-	<script id="template" type="x-tmpl-mustache">
-	
-	<input type="button" class="btn btn-back" value="select data"> <span class="heading heading-table">Here is the data that you have requested:</span>
+	<input type="button" id='back-btn' class="btn btn-back" value="select data"/> <span class="heading heading-table">Here is the data that you have requested:</span>
 	<table class="data-table">
-	<tr>{{#names}}
-	<th>{{name}}</th>
-	{{/names}}
+	<tr>
+	{{#properties}}
+	    <th>{{.}}</th>
+	{{/properties}}
 	</tr>
 	
+	{{#persons}}
 	<tr>
-	{{#titles}}
-	<td>{{title}}</td>
-	{{/titles}}
+	    {{#data}}
+            <td>{{.}}</td>
+        {{/data}}
 	</tr>
+	{{/persons}}
 	
 	</table>
  
+
+
 </script>
 
-    <script type="text/javascript" src="script/script.js"></script>
+<script type="text/javascript" src="script/script.js"></script>
 </body>
 </html>
