@@ -3,7 +3,6 @@ html{
 	font-size: 16px;
 	font-family: Arial, sans-serif;
 	padding: 0;
-
 }
 
 body{
@@ -71,7 +70,6 @@ h1{
 	color: #1881ac;
 	font-size: 18px;
 	margin: 25px 0 30px;
-	
 }
 
 .select-wrapper{
@@ -89,7 +87,6 @@ h1{
 
 .data-select li{
 	margin-bottom: 6px;
-
 }
 
 label{
@@ -178,13 +175,11 @@ input[type="submit"]{
 	display: table-cell;
 	padding: 10px;
 	border-right: 1px solid white;
-
 }
 
 .data-table td:last-child{
 	border: none;
 }
-
 
 .data-table tr:nth-child(even){
 	background: #e3e3e3;

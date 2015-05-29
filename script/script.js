@@ -1,9 +1,12 @@
-	
 	$("#sendReq").bind("click", sendReq);
 	
     $("#submit").bind("click", function(event){
         event.preventDefault();
-        renderTable();
+		var check = checkboxScan();
+			if (check.length > 0){renderTable(check);}
+			else {
+				alert("Выберите хотя бы один пункт списка!");
+			};
     });
 	
     $("#selectall").bind("click", function(event){
@@ -54,21 +57,24 @@
         };
     };
 
-    function renderTable(){
+	function checkboxScan(){
+    var checkedElements = $("[type='checkbox']:checked");
+    var checkedProperties = [];
+    $(checkedElements).each(function(){
+     checkedProperties.push($(this).attr('id'));
+    });
+		return checkedProperties;
+	};
+	
+    function renderTable(checkedProperties){
         $("#data-wrapper").toggleClass("hidden");
         $("#result-heading").toggleClass("hidden");
         $("#table-wrapper").toggleClass("hidden");
         $("#submit, #selectall, #selectclear, .heading-form").toggleClass("hidden");
-        var checkedElements = $("[type='checkbox']:checked");
-        var checkedProperties = [];
-        $(checkedElements).each(function(){
-            checkedProperties.push($(this).attr('id'));
-        });
         var data = {
             "properties": checkedProperties,
             "persons": reArrangeData(checkedProperties)
         };
-
         var template = $("#template").html();
         var rendered = Mustache.render(template, data);
         $(".data-select").empty();
