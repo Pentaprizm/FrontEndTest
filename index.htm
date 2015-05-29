@@ -1,5 +1,4 @@
 <!doctype html>
-
 <html>
 <head>
     <meta charset="utf-8">
@@ -34,7 +33,6 @@
         <div class="clearfix">
             <div id="sel-wrap-0" class="select-wrapper">
                 <ul class="data-select">
-
                 </ul>
             </div>
 
@@ -51,13 +49,14 @@
     </form>
 </div>
 
-<div id="table-wrapper" class="wrapper">
+<div id="result-heading" class="wrapper hidden">
+	<input type="button" id='back-btn' class="btn btn-back" value="select data"/> <span class="heading heading-table">Here is the data that you have requested:</span>
 </div>
 
+<div id="table-wrapper" class="wrapper hidden">
+</div>
 
 <script id="template" type="x-tmpl-mustache">
-	
-	<input type="button" id='back-btn' class="btn btn-back" value="select data"/> <span class="heading heading-table">Here is the data that you have requested:</span>
 	<table class="data-table">
 	<tr>
 	{{#properties}}
@@ -72,11 +71,7 @@
         {{/data}}
 	</tr>
 	{{/persons}}
-	
 	</table>
- 
-
-
 </script>
 
 <script type="text/javascript" src="script/script.js"></script>
